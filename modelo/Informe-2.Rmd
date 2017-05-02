@@ -1,0 +1,110 @@
+---
+title: "Laboratorio 2 - ANCOVA"
+author: "Nombre de Equipo"
+date: "Fecha del Laboratorio"
+output: 
+  html_document: 
+    fig_height: 4
+    highlight: pygments
+    theme: spacelab
+---
+
+```{r setup, include=FALSE}
+# NO CAMBIAR EL 
+library(dplyr)
+library(ggplot2)
+```
+
+* * *
+
+## Informe de Laboratorio
+
+#### Cargar los datos:
+```{r cargar-datos}
+load(url("https://stat.duke.edu/~mc301/data/mlb11.RData"))
+```
+
+
+## Ejercicios:
+
+#### Ejercicio 1: 
+
+
+
+#### Ejercicio 2: 
+
+
+
+#### Ejercicio 3: 
+
+
+
+#### Ejercicio 4: 
+
+
+
+
+#### Ejercicio 5: 
+
+
+
+#### Ejercicio 6:
+
+
+
+#### Ejercicio 7:
+
+
+
+#### Ejercicio 8:
+
+
+
+
+
+* * *
+
+## Por su cuenta:
+
+#### 1: 
+
+
+
+
+
+#### 2: 
+
+
+
+
+#### 3:
+
+
+
+#### 4:
+
+
+
+
+
+#### 5:
+
+
+
+
+
+## Infome de trabajo en equipo
+
+<!--
+Para cada miembro del equipo, escriba su nombre, si estuvo o presente en la
+sesión de laboratorio, si fue autor en esta semana y su contribución al 
+laboratorio (como porcentaje). Los porcentajes deben sumar 100.
+-->
+
+| Team miembro            | Presente  | Autor   | Contribución % |
+|:------------------------|:---------:|:-------:|---------------:|
+| Nombre de miembro 1     | Sí / No   | Sí / No | 25%            |
+| Nombre de miembro 2     | Sí / No   | Sí / No | 25%            |
+| Nombre de miembro 3     | Sí / No   | Sí / No | 25%            |
+| Nombre de miembro 4     | Sí / No   | Sí / No | 25%            |
+| Total                   |           |         | 100%           |

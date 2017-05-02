@@ -1,0 +1,11 @@
+Clase	Grasa	Peso_carcasa
+Oveja	4	10.3
+Oveja	8	11.9
+Oveja	11	15
+Oveja	15	17.1
+Oveja	15	18.7
+Carnero	5	12.4
+Carnero	4	14.3
+Carnero	10	16.6
+Carnero	8	18.8
+Carnero	14	21.9
