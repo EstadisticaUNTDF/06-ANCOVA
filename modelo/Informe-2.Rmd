@@ -10,7 +10,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-# NO CAMBIAR EL 
+# NO CAMBIAR EL BlOQUE
 library(dplyr)
 library(ggplot2)
 ```
@@ -21,7 +21,8 @@ library(ggplot2)
 
 #### Cargar los datos:
 ```{r cargar-datos}
-load(url("https://stat.duke.edu/~mc301/data/mlb11.RData"))
+ovejas <- read.table(url("https://git.io/oveja1.txt"),
+           sep = "\t", header = TRUE)
 ```
 
 
@@ -68,6 +69,9 @@ load(url("https://stat.duke.edu/~mc301/data/mlb11.RData"))
 
 #### 1: 
 
+```{r cargar-nuevos-datos}
+ovejas2 <- read.table(url("https://git.io/ovejas2.txt"), header = TRUE)
+```
 
 
 
