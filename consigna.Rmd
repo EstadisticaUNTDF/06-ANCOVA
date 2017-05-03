@@ -128,7 +128,7 @@ ggplot(ovejas, aes(Peso_carcasa, Grasa, colour = Clase)) +
 ```
 
 
-### Ejercicio 4
+### Ejercicio 5
 
 ```
 ¿Qué relación entre las variables logra distinguir en base al gráfico?
@@ -229,7 +229,7 @@ objeto del modelo ajustado.
 model.matrix(ovejas.fm1)
 ```
 
-### Ejercicio 5
+### Ejercicio 6
 
 ```
 Interprete la salida de model.matrix. ¿Qué significa cada columna? ¿Cómo lo
@@ -250,7 +250,7 @@ modelo. La forma de hacerlo es con la función `anova()`:
 anova(ovejas.fm1)
 ```
 
-### Ejercicio 6
+### Ejercicio 7
 
 ```
 En base a la tabla de ANOVA ¿Es significativa la interacción?
@@ -276,7 +276,7 @@ Volvamos a ver si hay diferencias entre las clases con la función `anova()`
 anova(ovejas.fm2)
 ```
 
-## Ejercicio 7
+## Ejercicio 8
 ```
 ¿Hay evidencias de diferencias significativas entre el espesor de la grasa entre
 ovejas y carneros luego de eliminar el efecto del peso? ¿Cómo se compara con
@@ -318,7 +318,7 @@ Y veamos que pasó:
 ```{r}
 summary(ovejas.fm3)
 ```
-### Ejercicio 8
+### Ejercicio 9
 
 ```
 En base al resumen del modelo ¿Les parece que hay diferencias significativas en
