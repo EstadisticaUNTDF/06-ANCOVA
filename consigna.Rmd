@@ -44,13 +44,13 @@ Lo primero que vamos a hacer es graficar los datos de grasa por sexo. Para
 hacerlo, usamos:
 
 ```{r}
-ggplot(ovejas, aes(x = Kind, y = Fatness)) +
+ggplot(ovejas, aes(x = Clase, y = Grasa)) +
   geom_point()
 ```
 
 La primer función crea la "base" del gráfico, usando el objeto `ovejas` como
-datos. Luego, la función `aes` indica que use la columna `Kind` para el eje
-x y `Fatness` para el y. Luego agregamos que queremos hacer puntos con esos 
+datos. Luego, la función `aes` indica que use la columna `Clase` para el eje
+x y `Grasa` para el y. Luego agregamos que queremos hacer puntos con esos 
 datos con `geom_point`.
 
 Aunque así es medio difícil ver si hay diferencias, podemos agregar un boxplot
