@@ -31,8 +31,8 @@ paga menos el kilo animal más graso porque en proporción tiene menos carne.
 
 Un frigorífico quiere saber si las hembras tienen la misma cantidad de grasa que
 los machos. Para ello han faenado cinco hembras y cinco machos. En cada caso,
-además de registar el sexo de animal, pesaron la carcasa en kg. 
-y midieron la grasa como la profundida de la misma a la altura de la doceava
+además de registrar el sexo de animal, pesaron la carcasa en kg. 
+y midieron la grasa como la profundidad de la misma a la altura de la doceava
 costilla
 
 ```{r cargar-datos}
@@ -53,7 +53,7 @@ datos. Luego, la función `aes` indica que use la columna `Kind` para el eje
 x y `Fatness` para el y. Luego agregamos que queremos hacer puntos con esos 
 datos con `geom_point`.
 
-Aunque así es medio díficil ver si hay diferencias, podemos agregar un boxplot
+Aunque así es medio difícil ver si hay diferencias, podemos agregar un boxplot
 por encima
 
 ```{r}
@@ -63,7 +63,7 @@ ggplot(ovejas, aes(Clase, y = Grasa)) +
 ```
 Este caso es similar al anterior, pero agregamos el gráfico de cajas y barras
 con `geom_boxplot` y se pone antes que `geom_point` porque las formas se 
-gráfican en el orden que se llaman. De otra forma la caja taparía a los puntos.
+grafican en el orden que se llaman. De otra forma la caja taparía a los puntos.
 
 
 ### Ejercicio 1
@@ -105,8 +105,8 @@ t.test(Grasa ~ Clase, data = ovejas, alternative =  , var.equal = T)
 
 Analicemos la salida de esta función por un momento. Primero, no indica el nombre
 del test que se realizo. Luego sigue un bloque donde nos dice que datos se usó;
-Fatness by Kind (grasa por tipo (sexo)). Y nos da el valor del estadístico t
-seguido por los grados de libertad (`gl`) y la probabildad de un valor `t`
+Grasa by Clase (grasa por Clase (sexo)). Y nos da el valor del estadístico t
+seguido por los grados de libertad (`gl`) y la probabilidad de un valor `t`
 mayor (o menor según la hipótesis que estemos usando). Luego nos indica que 
 cola estamos usando. Seguido por los intervalos de confianza (inferior y superior)
 Finalmente, nos da los estimadores de las medias para los dos grupos.
@@ -136,7 +136,7 @@ ggplot(ovejas, aes(Peso_carcasa, Grasa, colour = Clase)) +
 ```
 
 
-Como tenemos dos variables independientes, una cualitiva y otra continua, usamos
+Como tenemos dos variables independientes, una cualitativa y otra continua, usamos
 un análisis de covarianza. La forma de usarlo es similar, una formula para 
 describir la relación entre los datos, inicialmente no sabemos si las pendientes
 son las mismas para ambos sexos (paralelas). Por lo que ajustamos un modelo
@@ -146,7 +146,7 @@ con pendientes independientes
 ovejas.fm1 <- lm(Grasa ~ Clase + Peso_carcasa + Clase:Peso_carcasa, data = ovejas)
 ```
 
-Analisemos lo que hemos hecho arriba. Primero, llamamos a la función `lm` que
+Analicemos lo que hemos hecho arriba. Primero, llamamos a la función `lm` que
 ajusta modelos de regresión lineales. La formula que pusimos tiene varios 
 componentes, veamos que significa cada uno de ellos. Primero, la variable de 
 respuesta `Grasa`antes del tilde (`~`), luego de él van las variables 
@@ -187,14 +187,14 @@ máximo). Luego la tabla de coeficientes. Aquí tenemos varias cosas, `(Intercep
 la ordenada al origen, el efecto de `ClaseOveja`, la pendiente de `Peso_carcasa` y
 el cambio de pendiente en `Peso_carcasa` por `ClaseOveja`. 
 
-Detengamonos un poco,
+Detengámonos un poco,
 y analicemos estos resultados. Para coeficiente estimado, da el error estándar,
 el estadístico t y la probabilidad de un valor absoluto de t mayor. El estimador
 de la ordenada al origen es -7.9179 pero no es significativamente diferente de 0
 con $\alpha=0.05$. Pero ¿qué significa esta ordenada al origen? ¿Es de los
 carneros o las ovejas? Recordemos que, por defecto, R ordena los niveles de los
-factores alfabeticamente. Por lo tanto, `(Intercept)` corresponde a la ordenada
-al origen de los carneros. ¿Y que representa `ClaseOveja`? No es la ordenda al
+factores alfabéticamente. Por lo tanto, `(Intercept)` corresponde a la ordenada
+al origen de los carneros. ¿Y que representa `ClaseOveja`? No es la ordenada al
 origen de las ovejas, sino que es la *diferencia* entre la ordenada al origen base,
 en este caso los carneros, y la de ovejas: $e_o=\mu_c-\mu_o$. ¿Cómo calculamos
 la ordenada la origen de ovejas? 
@@ -214,7 +214,7 @@ oveja debemos sumar el efecto a la base: $\beta_o=`r coef.fm1[3]`+`r coef.fm1[4]
 Como en el caso anterior, no rechazar $H_0$ para el efecto implica que no es
 significativamente diferente del nivel base, *¡no que es 0!*.
 
-Graficamente, nuestro modelo se ve así:
+Gráficamente, nuestro modelo se ve así:
 
 ```{r eval=TRUE}
 ggplot(ovejas, aes(Grasa, Peso_carcasa, colour = Clase)) +
@@ -287,7 +287,7 @@ el modelo que no tiene en cuenta el efecto del peso?
 
 Nuestro modelo indica que no hay diferencias significativas entre ovejas y 
 carneros. Si bien son pocos datos, podemos intentar sacarles un poco más de 
-jugo a nuestros datos. La varianza del estimador aumenta a medida que se aleja 
+jugo a nuestros datos. La variaran del estimador aumenta a medida que se aleja 
 de la media de X ya que sigue esta formula:
 
 $$\hat S_\alpha=\hat S_r\sqrt{\frac{1}{n} (1+\frac{\bar x^2}{ns_x})}$$
@@ -332,7 +332,7 @@ anova()
 El frigorífico comisionó un nuevo experimento. Ahora quieren ver si los
 machos castrados (borregos) presentan el mismo contenido de grasa que las 
 ovejas y los carneros. Los animales pastorearon las misma pastura durante un 
-tiempo y luego fueron faenados. Para descargar los datos utilizen este comando
+tiempo y luego fueron faenados. Para descargar los datos utilicen este comando
 
 ```{r}
 read.table(url("https://git.io/ovejas2.txt"), header = TRUE)
