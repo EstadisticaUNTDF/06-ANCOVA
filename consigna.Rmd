@@ -216,8 +216,8 @@ significativamente diferente del nivel base, *¡no que es 0!*.
 
 Gráficamente, nuestro modelo se ve así:
 
-```{r eval=TRUE}
-ggplot(ovejas, aes(Grasa, Peso_carcasa, colour = Clase)) +
+```{r}
+ggplot(ovejas, aes(Peso_carcasa, Grasa, colour = Clase)) +
   stat_smooth(method = "lm", se=FALSE)
 ```
 
